@@ -1,0 +1,18 @@
+// config/database.ts
+import { Sequelize } from 'sequelize';
+
+const sequelize = new Sequelize('4s_checkin', 'abu', 'abuabu228', {
+  host: 'localhost',
+  dialect: 'mysql',
+  logging:false
+});
+
+// Kiểm tra kết nối
+try {
+  sequelize.sync({alter:true})
+  console.log('Kết nối cơ sở dữ liệu đã thiết lập thành công.');
+} catch (error) {
+  console.error('Không thể kết nối cơ sở dữ liệu:', error);
+}
+
+export default sequelize;
