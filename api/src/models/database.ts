@@ -1,7 +1,7 @@
 // config/database.ts
 import { Sequelize } from 'sequelize';
 
-const sequelize = new Sequelize('4s_checkin', 'abu', 'abuabu228', {
+const sequelize = new Sequelize('4s_checkin', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
   logging:false
